@@ -12,11 +12,11 @@ yourls_add_action('pre_redirect', 'flo_amazonAffiliate');
 
 function flo_amazonAffiliate($args) {
 	// insert your personal settings here
-	$tagUS = 'YOUR_TOKEN_HERE';
-	$tagDE = 'YOUR_TOKEN_HERE';
-	$tagUK = 'YOUR_TOKEN_HERE';
-	$tagFR = 'YOUR_TOKEN_HERE';
-	$tagES = 'YOUR_TOKEN_HERE';
+	$tagUS = 'YOUR_TAG_HERE';
+	$tagDE = 'YOUR_TAG_HERE';
+	$tagUK = 'YOUR_TAG_HERE';
+	$tagFR = 'YOUR_TAG_HERE';
+	$tagES = 'YOUR_TAG_HERE';
 	$campaign = 'YOUR_CAMPAIGN_HERE';
 	
 	// get url from arguments; create dictionary with all regex patterns and their respective affiliate tag as key/value pairs
@@ -78,7 +78,7 @@ function addTagToURL($url, $tag) {
 	// add our tag to the URL
 	if (strpos($url, '?') !== false) { 
 		// there's already a query string in our URL, so add our tag with "&"
-		// add token depending on if we need to add a "&" or not
+		// add tag depending on if we need to add a "&" or not
 		if (substr($url, -1) == "&") {
 			$url = $url.'tag='.$tag;
 		} else {
