@@ -3,7 +3,7 @@
 Plugin Name: Amazon Affiliate
 Plugin URI: https://github.com/floschliep/YOURLS-Amazon-Affiliate
 Description: Add your Amazon Affiliate-Tag to all Amazon URLs before redirection
-Version: 1.1
+Version: 1.2
 Author: Florian Schliep
 Author URI: https://floschliep.com
 */
@@ -12,6 +12,7 @@ yourls_add_action('pre_redirect', 'flo_amazonAffiliate');
 
 function flo_amazonAffiliate($args) {
 	// insert your personal settings here
+	$tagIN = 'YOUR_TAG_HERE';
 	$tagIT = 'YOUR_TAG_HERE';
 	$tagUS = 'YOUR_TAG_HERE';
 	$tagDE = 'YOUR_TAG_HERE';
@@ -24,6 +25,7 @@ function flo_amazonAffiliate($args) {
 	// get url from arguments; create dictionary with all regex patterns and their respective affiliate tag as key/value pairs
 	$url = $args[0];
 	$patternTagPairs = array(
+		'/^http(s)?:\\/\\/(www\\.)?amazon.in+/ui' => $tagIN,
 		'/^http(s)?:\\/\\/(www\\.)?amazon.it+/ui' => $tagIT,
 		'/^http(s)?:\\/\\/(www\\.)?amazon.com+/ui' => $tagUS,
 		'/^http(s)?:\\/\\/(www\\.)?amazon.de+/ui' => $tagDE,
