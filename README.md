@@ -4,7 +4,7 @@ YOURLS-Amazon-Affiliate
 A YOURLS plugin which adds your Amazon Affiliate-Tag to all Amazon URLs before redirection.
 
 ## Supported Partner Programs
-This plugin supports `amazon.com`, `amazon.de`, `amazon.co.uk`, `amazon.fr`, `amazon.es` and `amazon.co.jp` URLs.
+This plugin supports `amazon.com`, `amazon.de`, `amazon.co.uk`, `amazon.fr`, `amazon.es`, `amazon.it`, `amazon.in` and `amazon.co.jp` URLs.
 
 ## Installation
 * Open the `plugin.php` file located in the `amazon-affiliate` folder
